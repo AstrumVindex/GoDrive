@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: telegram-drive-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.9.0
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: ADMIN_ID
+        sync: false
+      - key: FOLDER_ID
+        sync: false
+      - key: SERVICE_ACCOUNT_FILE
+        sync: false
+      - key: DB_PATH
+        value: images.db
+      - key: MAX_RETRIES
+        value: 3
+      - key: DOWNLOADS_DIR
+        value: downloads
+      - key: LOG_FILE
+        value: logs/bot.log
+    plan: free 

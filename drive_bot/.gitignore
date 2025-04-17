@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.py[cod]
+*.env
+*.log
+*.db
+
+# Secrets
+credentials.json
+config.py
+bot.log
+images.db
+downloads/
